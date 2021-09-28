@@ -1,0 +1,16 @@
+<view class="news">
+  <view class="n2">
+    <view class="n21" wx:for="{{information}}" wx:for-item="item" wx:key="unique">
+      <navigator url="news/news1?id={{item.id}}">
+        <view class="n21-left">
+          <image src="{{item.showImage}}"></image>
+        </view>
+        <view class="n21-right">
+          <view class="n21-title">{{item.title}}</view>
+          <view class="n21-subtitle">{{item.subTitle}}</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+</view>
