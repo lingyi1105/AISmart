@@ -1,3 +1,5 @@
+const config = require("../../http/config");
+
 // pages/discover/discover.js
 Page({
 
@@ -5,6 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    articleList: [],
 
   },
 
@@ -26,7 +29,8 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    console.log('----onShow')
+    this.getDiscoverList();
   },
 
   /**
@@ -54,7 +58,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    console.log('----上拉')
   },
 
   /**
@@ -64,26 +68,26 @@ Page({
 
   },
 
-  information: function () {
-    console.log("---请求发现列表")
+  getDiscoverList: function () {
+    var that = this;
 
-    var url = "api/miniapp/discoveryList"
-    url = getApp().globalData.baseURL + url;
-    console.log(url)
+    var url = config.GetDiscoverList;
+    console.log("---请求发现列表",url)
 
     wx.request({
       url: url,
       data: {
         page: 0,
         size: 100,
-        userId: wx.getStorage("Oldusernew").userId
+        userId: 0
       },
       method: "GET",
       success: function (res) {
-        console.log("发现列表")
-        console.log(res)
+        console.log("---发现列表：",res)  //服务器请求回来的格式详细见：discoverlist.json
         if(res.data.code == 200) {
-          
+          that.setData({
+            articleList: res.data.data
+          })
         }
       }
     })

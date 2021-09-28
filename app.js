@@ -1,5 +1,9 @@
 // app.js
 App({
+
+  globalData: {
+    userInfo: null,
+  },
   
   onLaunch() {
     // 展示本地存储能力
@@ -14,10 +18,5 @@ App({
       }
     })
   },
-
-  globalData: {
-    userInfo: null,
-    baseURL: "https://miniapp.aifitpro.aicare.net.cn/"
-  }
 
 })

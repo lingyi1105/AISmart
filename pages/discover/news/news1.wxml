@@ -1,2 +1,4 @@
 <!--pages/discover/list/news1.wxml-->
-<text>pages/discover/list/news1.wxml</text>
+<!-- <text>pages/discover/list/news1.wxml</text> -->
+<import src="../../../utils/wxParse/wxParse.wxml"></import>
+<template is='wxParse' data="{{wxParseData:wz.nodes}}"></template>
