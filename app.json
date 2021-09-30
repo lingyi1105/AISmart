@@ -1,15 +1,15 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/home/home",
     "pages/discover/discover",
     "pages/discover/news/news1",
     "pages/mine/mine",
+    "pages/index/index",
     "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#2D9FFF",
     "navigationBarTitleText": "AISmart",
     "navigationBarTextStyle": "black"
   },
@@ -18,7 +18,7 @@
     "selectedColor": "#2D9FFF",
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/home/home",
         "text": "首页",
         "iconPath": "pages/images/tab/home.png",
         "selectedIconPath": "pages/images/tab/home_on.png"

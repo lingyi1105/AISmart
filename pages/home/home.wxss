@@ -1,1 +1,38 @@
 /* pages/home.wxss */
+
+.topView {
+  width: 100%;
+  height: 400rpx;
+  /* background-color: #2D9FFF; */
+  background-color: yellow;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+}
+
+.connectBtn {
+  /* position: relative; */
+  /* top: 40rpx; */
+  width: auto;
+  height: 60rpx;
+  margin: 0rpx 20rpx 0rpx 20rpx;
+  background-color: red;
+}
+
+.circleView {
+  margin: 20rpx 0rpx 0rpx 0rpx;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300rpx;
+  height: 300rpx;
+  background-color: green;
+}
+
+.circleView image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: pink;
+  width: 300rpx;
+  height: 300rpx;
+}

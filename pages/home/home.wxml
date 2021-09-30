@@ -1,2 +1,13 @@
 <!--pages/home.wxml-->
-<text>pages/home.wxml</text>
+<!-- <text>pages/home.wxml</text> -->
+<!-- text不写样式也能显示，view就不行，必须设置样式 -->
+
+<view class="topView">
+  <view class="connectBtn" bindtap="connectBtnTap">{{connectBtnText}}</view>
+  <view class="circleView">
+    <image src="../images/test_circle.png"></image>
+
+
+  </view>
+
+</view>
