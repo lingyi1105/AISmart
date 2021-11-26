@@ -4,10 +4,18 @@
 
 <view class="topView">
   <view class="connectBtn" bindtap="connectBtnTap">{{connectBtnText}}</view>
-  <view class="circleView">
-    <image src="../images/test_circle.png"></image>
 
+  <view class="imageBackView">
+    <image class="c-image" src="../images/test_circle.png"></image>
+  </view>
 
+  <view class="scoreBackView">
+    <text class="c-score-title">综合得分</text>
+    <view class="score-view">
+      <text class="c-score-value">--.--</text>
+      <text class="c-score-unit">分</text>
+    </view>
+    <text class="c-weight-day-before">505天前称重</text>
   </view>
 
 </view>

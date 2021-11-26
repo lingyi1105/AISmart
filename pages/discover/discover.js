@@ -72,7 +72,7 @@ Page({
     var that = this;
 
     var url = config.GetDiscoverList;
-    console.log("---请求发现列表",url)
+    console.log("---请求发现列表:", url)
 
     wx.request({
       url: url,
@@ -83,8 +83,8 @@ Page({
       },
       method: "GET",
       success: function (res) {
-        console.log("---发现列表：",res)  //服务器请求回来的格式详细见：discoverlist.json
-        if(res.data.code == 200) {
+        console.log("---发现列表：", res) //服务器请求回来的格式详细见：discoverlist.json
+        if (res.data.code == 200) {
           that.setData({
             articleList: res.data.data
           })

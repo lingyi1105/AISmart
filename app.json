@@ -1,4 +1,5 @@
 {
+  "entryPagePath": "pages/home/home",
   "pages": [
     "pages/home/home",
     "pages/discover/discover",
@@ -16,8 +17,8 @@
   "tabBar": {
     "color": "#999",
     "selectedColor": "#2D9FFF",
-    "list": [
-      {
+    "backgroundColor": "#ffff00",
+    "list": [{
         "pagePath": "pages/home/home",
         "text": "首页",
         "iconPath": "pages/images/tab/home.png",
@@ -38,5 +39,41 @@
     ]
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "networkTimeout": {
+    "request": 20000,
+    "connectSocket": 20000,
+    "uploadFile": 60000,
+    "downloadFile": 60000
+  },
+  "darkmode": true,
+  "requiredBackgroundModes": [
+    "audio",
+    "location"
+  ],
+  "plugins": {
+    "蓝牙体脂秤sdk": {
+      "version": "1.0.2",
+      "provider": "wxf6042009c5b19c52"
+    },
+    "ElinkThings蓝牙SDK": {
+      "version": "dev-50f6276f3062d6965623400440a32ccf",
+      "provider": "wx17e93aad47cdae1a"
+    }
+  },
+  "permission": {
+    "scope.userInfo": {
+      "desc": "用户信息仅用来注册登录识别凭证，保证不会泄露"
+    },
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    },
+    "scope.writePhotosAlbum": {
+      "desc": "需要相册权限才能保存照片"
+    },
+    "scope.camera": {
+      "desc": "需要摄像头权限才能拍照作为头像"
+    }
+  },
+  "comments": "查看所有配置项目(json无法写注释用这种方式来写,只报警告无效key:comments,不影响功能)https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html"
 }

@@ -1,11 +1,23 @@
 // pages/home.js
+
+const aaa = require("../../http/util");
+
+const ble_sdk = requirePlugin("蓝牙体脂秤sdk")
+const elink_plugin = requirePlugin("ElinkThings蓝牙SDK").AiLink
+//测试插件
+let score = elink_plugin.getBrushAllScore(120, 90, 30, 60)
+console.log(`---测试刷牙得分：${score}`)
+
+// import util from "../../http/util"
+
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    connectBtnText: "点击开启蓝牙"
   },
 
   /**
@@ -27,6 +39,9 @@ Page({
    */
   onShow: function () {
     console.log(getApp().globalData.baseURL)
+
+    console.log("====:" + aaa.GetDiscoverList);
+
   },
 
   /**
